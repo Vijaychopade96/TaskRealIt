@@ -1,4 +1,4 @@
-package com.Task.TaskSpringBoot.Controller;
+nopackage com.Task.TaskSpringBoot.Controller;
 
 import com.Task.TaskSpringBoot.Model.Task;
 import com.Task.TaskSpringBoot.Service.TaskService;
@@ -22,4 +22,9 @@ public class TaskController {
     public Task taskModify(@RequestBody Map<String, String> inputs) {
         return taskService.modifyMenu(inputs);
     }
+    
+      @PostMapping("/create")
+      public Task create(Task task){
+       return taskservice.cretaeTask(task);
+   }
 }
